@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaResume</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter and Poppins -->
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+    <!-- html2canvas and jsPDF CDN links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Progress Bar CSS -->
+    <link rel="stylesheet" href="progress-bar.css">
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" style="position:fixed;top:16px;right:16px;z-index:1000;">🌙 Dark Mode</button>
 </head>
 <body>
     <header>
@@ -55,6 +65,66 @@
             </form>
             <div id="formMessage"></div>
         </section>
+        <!-- Multi-step Progress Bar -->
+        <div class="progress-bar-container">
+            <ul class="progress-bar">
+                <li class="step active" data-step="0">Personal Information</li>
+                <li class="step" data-step="1">Education</li>
+                <li class="step" data-step="2">Work Experience</li>
+                <li class="step" data-step="3">Skills</li>
+                <li class="step" data-step="4">Download</li>
+            </ul>
+        </div>
+        <!-- Step Sections -->
+        <form id="resumeForm">
+            <div class="step-section" data-step="0">
+                <h2>Personal Information</h2>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="step-section" data-step="1" style="display:none;">
+                <h2>Education</h2>
+                <input type="text" placeholder="Degree" required>
+                <input type="text" placeholder="Institution" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="step-section" data-step="2" style="display:none;">
+                <h2>Work Experience</h2>
+                <input type="text" placeholder="Job Title" required>
+                <input type="text" placeholder="Company" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="step-section" data-step="3" style="display:none;">
+                <h2>Skills</h2>
+                <input type="text" placeholder="Skill" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="step-section" data-step="4" style="display:none;">
+                <h2>Download</h2>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit">Download Resume</button>
+            </div>
+        </form>
+        <!-- Resume Score Evaluation -->
+        <div id="resumeScoreContainer" style="display:none;margin:32px auto;max-width:600px;text-align:center;">
+            <h2>Resume Score</h2>
+            <div style="width:100%;background:#e0e4ea;border-radius:8px;overflow:hidden;margin-bottom:16px;">
+                <div id="resumeScoreBar" style="height:32px;width:0;background:#2ecc40;transition:width 0.6s;"></div>
+            </div>
+            <div id="resumeScoreValue" style="font-size:1.5rem;font-weight:600;margin-bottom:16px;">Score: 0/100</div>
+            <ul id="resumeSuggestions" style="text-align:left;margin:0 auto 16px auto;max-width:400px;"></ul>
+        </div>
+        <!-- Resume Sharing Feature -->
+        <div id="resumeShareContainer" style="display:none;margin:32px auto;max-width:600px;text-align:center;">
+            <h2>Share Your Resume</h2>
+            <input type="text" id="resumeShareLink" readonly style="width:100%;margin-bottom:12px;">
+            <button id="copyShareLinkBtn">Copy Link</button>
+            <div id="shareLinkMessage" style="margin-top:8px;color:#2ecc40;"></div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2026 NovaResume. All rights reserved.</p>

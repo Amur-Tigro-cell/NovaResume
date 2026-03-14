@@ -1,13 +1,165 @@
+/* Resume Builder Split-Screen Styles */
+.builder-section {
+    margin: 3rem 0;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #e3eafc 0%, #f4f6fb 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+}
+.builder-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2d3a4b;
+    margin-bottom: 2rem;
+}
+.builder-split {
+    display: flex;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.builder-form {
+    flex: 1 1 350px;
+    min-width: 280px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+    padding: 2rem 1rem;
+}
+.builder-form label {
+    font-weight: 600;
+    color: #2d3a4b;
+    margin-top: 1rem;
+    display: block;
+}
+.builder-form input,
+.builder-form textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f4f6fb;
+    resize: vertical;
+}
+.builder-preview {
+    flex: 1 1 350px;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.resume-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 350px;
+}
+.resume-card h3 {
+    font-size: 1.5rem;
+    color: #2d3a4b;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.preview-section {
+    margin-bottom: 1.2rem;
+}
+.preview-section strong {
+    color: #4a90e2;
+    font-size: 1.1rem;
+}
+.preview-section p {
+    margin: 0.5rem 0 0 0;
+    color: #222;
+    font-size: 1rem;
+}
+@media (max-width: 900px) {
+    .builder-split {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .builder-preview {
+        margin-top: 2rem;
+    }
+}
+/* Resume Template Section Styles */
+.template-section {
+    margin: 3rem 0;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f4f6fb 0%, #e3eafc 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+}
+.template-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2d3a4b;
+    margin-bottom: 2rem;
+}
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.template-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.template-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+    border-color: #4a90e2;
+}
+.template-card img {
+    width: 100%;
+    max-width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    background: #e3eafc;
+}
+.template-card h3 {
+    font-size: 1.1rem;
+    color: #2d3a4b;
+    margin: 0;
+}
+@media (max-width: 1100px) {
+    .template-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .template-grid {
+        grid-template-columns: 1fr;
+    }
+    .template-section {
+        padding: 1rem 0.5rem;
+    }
+}
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f6fb;
+    background: linear-gradient(135deg, #e3eafc 0%, #f4f6fb 100%);
     color: #222;
 }
 header {
-    background: #2d3a4b;
-    color: #fff;
+    background: transparent;
+    color: #2d3a4b;
     padding: 2rem 0 1rem 0;
     text-align: center;
 }
@@ -37,9 +189,105 @@ main {
     max-width: 800px;
     margin: 2rem auto;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
     padding: 2rem;
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 3rem 1rem 2rem 1rem;
+    background: linear-gradient(135deg, #e3eafc 0%, #f4f6fb 100%);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+    margin: 2rem auto;
+    max-width: 1100px;
+}
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+.hero-text {
+    flex: 1 1 350px;
+    min-width: 300px;
+}
+.hero-headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3a4b;
+    margin-bottom: 1rem;
+}
+.hero-desc {
+    font-size: 1.2rem;
+    color: #4a5a6a;
+    margin-bottom: 2rem;
+}
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+.primary-btn {
+    background: linear-gradient(90deg, #2d3a4b 0%, #4a90e2 100%);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.primary-btn:hover {
+    background: linear-gradient(90deg, #4a90e2 0%, #2d3a4b 100%);
+    transform: translateY(-2px);
+}
+.secondary-btn {
+    background: #fff;
+    color: #2d3a4b;
+    border: 2px solid #4a90e2;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+    cursor: pointer;
+    transition: border 0.2s, color 0.2s;
+}
+.secondary-btn:hover {
+    border-color: #2d3a4b;
+    color: #4a90e2;
+}
+.hero-image {
+    flex: 1 1 300px;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+    background: #fff;
+    border: 1px solid #e3eafc;
+}
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero-image {
+        margin-top: 2rem;
+    }
+}
 }
 section {
     margin-bottom: 2rem;

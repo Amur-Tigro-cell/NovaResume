@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaResume</title>
     <link rel="stylesheet" href="style.css">
+    <script src="html2canvas.min.js"></script>
+    <script src="jsPDF.min.js"></script>
 </head>
 <body>
     <header>
@@ -19,7 +21,60 @@
             </ul>
         </nav>
     </header>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-headline">Build a Professional Resume in 60 Seconds</h2>
+                <p class="hero-desc">NovaResume helps you create stunning, professional resumes effortlessly. Choose a template, fill in your details, and get hired faster. No design skills required!</p>
+                <div class="hero-buttons">
+                    <button class="primary-btn" id="createResumeBtn">Create Resume</button>
+                    <button class="secondary-btn" id="viewTemplatesBtn">View Templates</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="hero-mockup.png" alt="Resume Preview" />
+            </div>
+        </div>
+    </section>
     <main>
+                <section id="builder" class="builder-section">
+                    <h2>Build Your Resume</h2>
+                    <div class="builder-split">
+                        <div class="builder-form">
+                            <form id="resumeForm">
+                                <label for="builderName">Full Name</label>
+                                <input type="text" id="builderName" name="builderName" placeholder="Your Name" required>
+
+                                <label for="builderEducation">Education</label>
+                                <textarea id="builderEducation" name="builderEducation" placeholder="Your Education" required></textarea>
+
+                                <label for="builderExperience">Experience</label>
+                                <textarea id="builderExperience" name="builderExperience" placeholder="Your Experience" required></textarea>
+
+                                <label for="builderSkills">Skills</label>
+                                <input type="text" id="builderSkills" name="builderSkills" placeholder="e.g. HTML, CSS, JS" required>
+                            </form>
+                        </div>
+                        <div class="builder-preview">
+                            <div class="resume-card" id="resumePreview">
+                                <h3 id="previewName">Your Name</h3>
+                                <div class="preview-section">
+                                    <strong>Education</strong>
+                                    <p id="previewEducation">Your Education</p>
+                                </div>
+                                <div class="preview-section">
+                                    <strong>Experience</strong>
+                                    <p id="previewExperience">Your Experience</p>
+                                </div>
+                                <div class="preview-section">
+                                    <strong>Skills</strong>
+                                    <p id="previewSkills">HTML, CSS, JS</p>
+                                </div>
+                            </div>
+                            <button class="primary-btn" id="downloadPdfBtn" style="margin-top:1.5rem;width:100%;">Download PDF</button>
+                        </div>
+                    </div>
+                </section>
         <section id="about">
             <h2>About Me</h2>
             <p>Hello! I'm [Your Name], a passionate professional seeking new opportunities. Welcome to my resume website!</p>
@@ -44,6 +99,28 @@
                 <li>JavaScript</li>
                 <li>Other relevant skills</li>
             </ul>
+        </section>
+
+        <section id="templates" class="template-section">
+            <h2>Choose Your Resume Template</h2>
+            <div class="template-grid">
+                <div class="template-card" data-template="1">
+                    <img src="hero-mockup.png" alt="Template 1 Preview">
+                    <h3>Modern Blue</h3>
+                </div>
+                <div class="template-card" data-template="2">
+                    <img src="hero-mockup.png" alt="Template 2 Preview">
+                    <h3>Classic Gray</h3>
+                </div>
+                <div class="template-card" data-template="3">
+                    <img src="hero-mockup.png" alt="Template 3 Preview">
+                    <h3>Minimal White</h3>
+                </div>
+                <div class="template-card" data-template="4">
+                    <img src="hero-mockup.png" alt="Template 4 Preview">
+                    <h3>Elegant Gold</h3>
+                </div>
+            </div>
         </section>
         <section id="contact">
             <h2>Contact</h2>
