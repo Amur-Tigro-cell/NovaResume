@@ -370,3 +370,182 @@ h2 {
 section {
     margin-bottom: 32px;
 }
+
+/* Hero Section and Main Alignment Improvements */
+.hero-section {
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    padding: 32px 24px;
+    background: #f7f9fb;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,123,255,0.07);
+    text-align: center;
+}
+.hero-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+.hero-section .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.hero-section .hero-buttons button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 8px;
+    background: #23272a;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+    transition: background 0.2s;
+}
+.hero-section .hero-buttons button:hover {
+    background: #0078d7;
+}
+.resume-preview {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0;
+}
+.resume-preview img {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,123,255,0.07);
+}
+.resume-builder {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,123,255,0.07);
+}
+.resume-builder h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.resume-builder form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.resume-builder input, .resume-builder textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e4ea;
+    font-size: 1rem;
+    background: #f7f9fb;
+    color: #222;
+}
+.resume-builder button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 8px;
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+    transition: background 0.2s;
+}
+.resume-builder button:hover {
+    background: #005fa3;
+}
+.resume-templates {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #f7f9fb;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,123,255,0.07);
+    text-align: center;
+}
+.resume-templates h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+.resume-templates .template-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.resume-templates .template {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+    padding: 16px 24px;
+    text-align: center;
+    min-width: 180px;
+}
+.resume-templates .template img {
+    max-width: 100px;
+    margin-bottom: 8px;
+}
+.resume-templates .template h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.contact-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,123,255,0.07);
+}
+.contact-section h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contact-section input, .contact-section textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e4ea;
+    font-size: 1rem;
+    background: #f7f9fb;
+    color: #222;
+}
+.contact-section button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 8px;
+    background: #23272a;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+    transition: background 0.2s;
+}
+.contact-section button:hover {
+    background: #0078d7;
+}
+@media (max-width: 900px) {
+    .hero-section, .resume-builder, .resume-templates, .contact-section {
+        max-width: 98vw;
+        padding: 16px 8px;
+    }
+    .resume-templates .template-list {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
